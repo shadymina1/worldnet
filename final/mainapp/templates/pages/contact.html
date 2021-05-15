@@ -1,0 +1,101 @@
+
+    {% extends "base.html" %}
+    {% block content %}
+    {% load static %}
+
+
+<section>
+    <div   style="height: 20em ; background-image: url('{% static "img/citytech.jpg"%}'); ">
+        <div style="height:10em ;"></div>
+        <h1 style="color:white; background-color: #071d5a93; " >Contact Us</h1>
+        <h3 style="color:white ; background-color: #071d5a93;">Your Opinions Are Highly Appreciated!</h3>
+    </div>
+</section>
+<section>
+    <br>
+
+    {%if note == 0 %}
+    <h2  >{{defaultnote}}</h2>
+    {%else%}
+    <h2 style="color:green;background-color:rgb(212, 239, 250)" >{{note}}</h2>
+    {% endif %}
+    <div class="container">
+        <br><br>
+        <h2>Sales</h2>
+        <div class="row">
+            <div class="card col-12 col-md-3 col-lg-3" style ="border:none ;">
+            </div>
+            <div class="card col-12 col-md-3 col-lg-3" style ="border:none ; ">
+                <h3 class=""><strong>Telephone</strong><strong><br></strong>
+                </h3>
+                <h4 class="">01 (416) 123 45 67 &nbsp;<br>
+                </h4>
+            </div>
+            <div class="card col-12 col-md-3 col-lg-3" style="border:none ;  ;">
+                <h3 class="card-title mbr-fonts-style display-7"><strong>Email</strong></h3>
+                <h4 class="card-text mbr-fonts-style display-7">sales@worldnet.ca<br></h4>
+            </div>
+            <div class="card col-12 col-md-3 col-lg-3" style ="border:none ; ">
+            </div>
+        </div>
+    </div >
+</section>
+<hr width="50%">
+<br>
+<section >
+    <div class="container" >
+        <br>
+        <h2>Technical Support</h2>
+        <div class="row">
+            <div class="card col-12 col-md-3 col-lg-3" style ="border:none ;">
+            </div>
+            <div class="card col-12 col-md-3 col-lg-3" style ="border:none ; ">
+                <h3 class=""><strong>Telephone</strong><strong><br></strong>
+                </h3>
+                <h4 class="">01 (416) 123 45 67 &nbsp;<br>
+                </h4>
+            </div>
+            <div class="card col-12 col-md-3 col-lg-3" style="border:none ; ">
+                <h3 class="card-title mbr-fonts-style display-7"><strong>Email</strong></h3>
+                <h4 class="card-text mbr-fonts-style display-7">support@worldnet.ca<br></h4>
+            </div>
+            <div class="card col-12 col-md-3 col-lg-3" style ="border:none ; ">
+            </div>
+        </div>
+    </div >
+    <hr width="50%">
+</section>
+<section>
+<div>
+
+</div>
+<div>
+<br><h1>Get in Touch</h1><br>
+</div>
+
+</section>
+<section>
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                <form action="{% url 'contact' %}" method="POST" style = " text-align:center"> 
+                    
+                    {% csrf_token %}
+                    {{contactForm}}
+                    <br>
+                    <button class = "button">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+
+
+
+
+
+
+<div style="height:20em ;"></div>
+    {% endblock %}

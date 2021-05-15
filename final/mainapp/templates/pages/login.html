@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section>
+
+{% if note == "You have signd up"  %}
+
+<h1>{{note}}</h1>
+<h2>Do ypu like to check your order?</h2>
+<section class="container">
+   
+        <div class="row">
+            <div class="col">
+                <form  action="{% url 'myorder' %}" method="GET" style = " text-align:center"> 
+                    <button class = "button">See your order</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+{% else %}
+    <section class="container">
+    <h1>Log in</h1>
+    <h2 style="color:red" >{{note}}</h2>
+        <div class="row">
+            <div class="col">
+                <form  action="{% url 'login' %}" method="POST" style = " text-align:center"> 
+                    {% csrf_token %}
+                    {{logInForm}}
+                    <br>
+                    <button class = "button">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endif %}
+
+<esction>
+
+
+
+{% endblock %}

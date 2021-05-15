@@ -1,0 +1,30 @@
+
+    {% extends "base.html" %}
+    {% block content %}
+    {% load static %}
+
+<section >
+
+    {%if  note == "You are already registered , please sign in" %}
+    <h1> {{note}} </h1>
+    <h3>  Do you like to log in ?</h3>
+     <form  action="{% url 'login' %}" method="GET" style = " text-align:center"> 
+        <button class = "button">Log in </button>
+     </form>
+    {% else %}
+    <section class="container">
+    <h1>You are Placing Your Order Now</h1>
+        <div class="row">
+            <div class="col">
+                <form  action="{% url 'ordering' %}" method="POST" style = " text-align:center"> 
+                    {% csrf_token %}
+                    {{signUpForm}}
+                    <br>
+                    <button class = "button">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+</section>
+    {% endblock %}

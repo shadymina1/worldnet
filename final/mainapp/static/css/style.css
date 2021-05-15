@@ -1,0 +1,179 @@
+
+
+body{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.button{
+    transition-duration: 0.1s;
+    padding: 0.6em 2em;
+    background-color: rgb(5, 4, 87);
+    color: white;
+    font-size: 1.3em;
+    border-radius: 1.3em;
+    border: none;
+    margin: 1em;
+    box-shadow:1px 2px 3px rgb(23, 8, 105);
+}
+
+.button:hover{
+    background-color: rgb(47, 21, 139);
+}
+
+.button:active{
+    background-color: rgb(0, 230, 230);
+    color: rgb(42, 23, 146);
+    box-shadow:none;
+}
+
+#yy{
+    transition-duration: 3s;
+    border-radius: 1.9em;
+    border: solid 0.03em rgb(2, 41, 216);
+    box-shadow:10px 10px 20px rgba(48, 52, 112, 0.6);
+}
+.mynav{
+    background-color: rgb(212, 239, 250) !important;
+    font-size: larger;
+    
+    
+}
+
+ .navbar-nav .nav-link , a.navbar-brand  {  
+    
+    color: rgb(0, 0, 0)!important;
+    font-size: larger;
+    font-family: 'Jost', sans-serif;
+  
+}
+
+a{
+    font-size: larger;
+}
+
+
+.uspacing{
+    height:20em
+}
+
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+}
+
+.my-col{
+    margin: 1.1em;
+
+border-radius: 20px;
+box-shadow:4px 20px 57px rgb(54, 53, 133);
+padding: 0px;
+text-align: justify;
+
+}
+
+.about-img{
+  
+    border-radius: 20px;
+    
+}
+
+.jum-a{
+    padding: 3em;
+}
+
+
+form{
+    display: inline-block;
+    text-align: right;
+    width:30em;
+    
+   
+    border-radius: 8px;
+    
+    
+}
+
+#id_message{
+    height: 10em;
+}
+input {
+    width: 100%;
+    margin: 1em 0em;
+    max-width: 300px;
+    background-color: rgb(212, 239, 250);
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+   
+    height: 2.8em;
+    
+} 
+
+label{
+    display: none;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+}
+
+input.input-contact{
+    height: 40px;
+}
+
+#bg{
+    height: 100%;
+   
+}
+
+.branding-fram {
+   height:45em;
+   display: flex;
+   justify-content: center;
+}
+
+.branding{
+    color: white;
+    display: flex;
+    align-items: center;
+    
+}
+
+.bgo{
+    background-color: #0b08355e;
+}
+
+h1{
+    font-size: 4em;
+}
+
+.plan-card{
+    background-color: rgba(255, 255, 255, 0.404) !important;
+}
+
+@media only screen and (max-width: 600px) {
+    
+
+    form{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .uspacing{
+        height:3em
+    }
+
+
+  }
+
+  @media only screen and (max-width: 800px) {
+    .uspacing{
+        height:10em
+    }
+  }

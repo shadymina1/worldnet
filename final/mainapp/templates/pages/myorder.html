@@ -1,0 +1,29 @@
+
+    {% extends "base.html" %}
+    {% block content %}
+    {% load static %}
+
+
+<section class="content14 cid-sw6TEne89U" id="content14-p">
+    
+    
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                    <h1 class=" mbr-fonts-style  ">
+                    <br>
+                        <strong>Hello&nbsp; {{first_name.fields.firstName}}</strong></h1>
+                        <br><br>
+                <ul style="text-align: left; font-size: 1.3em;" class="list mbr-fonts-style display-7">
+                    <li><strong>Order Status :</strong><br>Your order has been confirmed.</li>
+                    <li><strong>Next step?</strong><br>Our team will call you to fix an appointment for installation shortly.</li>
+                    <li><strong>Next Payment:</strong><br>After 30 days from the installation. </li><li>You are on "Advanced" plan , your monthly payment is 49,95CAD&nbsp;&nbsp;</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    {% endblock %}
